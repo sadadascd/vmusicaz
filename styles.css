@@ -1,32 +1,38 @@
 body {
-    background-color: #ff0000;
-    color: #f0f0f0;
+    background-color: #0f0f0f;  /* preto suave igual YouTube */
+    color: #f1f1f1;            /* cinza clarinho igual legenda */
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
+    padding: 20px;            /* dá um respiro nas bordas */
 }
 
 h1 {
-    color: #5e0505;
+    color: #f1f1f1;           /* branco do título do YouTube */
     font-size: 45px;
-    margin-top: 40px;
+    margin-top: 20px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.1);  /* brilho sutil */
 }
 
 h2 {
-    color: #a8a8a8;
-    font-size: 30px;
+    color: #aaaaaa;           /* cinza médio igual subtítulos do YouTube */
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-weight: normal;      /* deixa mais suave, igual YouTube */
 }
 
 iframe {
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 12px;      /* borda mais suave */
+    border: 2px solid #272727; /* borda preta igual player do YouTube */
 }
 
 .palco {
-    background: #3a3a3a;
-    padding: 20px;
-    border-radius: 30px;
-    max-width: 800px;
-    margin: 30px auto;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    background: #0f0f0f;      /* fundo preto igual ao body */
+    padding: 5px;             /* só um espacinho mínimo */
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 10px auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8); /* sombra profunda */
 }
