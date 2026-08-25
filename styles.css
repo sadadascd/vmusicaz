@@ -1,38 +1,123 @@
 body {
-    background-color: #0f0f0f;  /* preto suave igual YouTube */
-    color: #f1f1f1;            /* cinza clarinho igual legenda */
+    background-color: #0f0f0f;
+    color: #f1f1f1;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
-    padding: 20px;            /* dá um respiro nas bordas */
+    padding: 20px;
 }
 
 h1 {
-    color: #f1f1f1;           /* branco do título do YouTube */
+    color: #f1f1f1;
     font-size: 45px;
     margin-top: 20px;
-    text-shadow: 0 0 20px rgba(255,255,255,0.1);  /* brilho sutil */
+    text-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
 
 h2 {
-    color: #aaaaaa;           /* cinza médio igual subtítulos do YouTube */
+    color: #aaaaaa;
     font-size: 28px;
     margin-top: 50px;
     margin-bottom: 15px;
-    font-weight: normal;      /* deixa mais suave, igual YouTube */
+    font-weight: normal;
+}
+
+/* DESTAQUE DO ARTISTA */
+.artista-destaque {
+    background: #1a1a1a;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 10px auto 20px;
+    border: 2px solid #333;
+    box-shadow: 0 0 30px rgba(255,255,255,0.05);
+}
+
+.nome-artista {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin: 0 15px;
+    text-shadow: 0 0 20px rgba(255,107,107,0.3);
+    letter-spacing: 3px;
+}
+
+.icone-artista {
+    font-size: 28px;
 }
 
 iframe {
     max-width: 100%;
-    border-radius: 12px;      /* borda mais suave */
-    border: 2px solid #272727; /* borda preta igual player do YouTube */
+    border-radius: 12px;
+    border: 2px solid #272727;
 }
 
 .palco {
-    background: #0f0f0f;      /* fundo preto igual ao body */
-    padding: 5px;             /* só um espacinho mínimo */
+    background: #0f0f0f;
+    padding: 5px;
     border-radius: 16px;
     max-width: 900px;
     margin: 10px auto;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8); /* sombra profunda */
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+/* BOTÕES DE LIKE/DESLIKE */
+.botoes-acao {
+    margin: 15px auto 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-like, .btn-deslike {
+    background: #272727;
+    color: #f1f1f1;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-like:hover {
+    background: #3a3a3a;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,200,0,0.2);
+}
+
+.btn-deslike:hover {
+    background: #3a3a3a;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,0,0,0.2);
+}
+
+.btn-like {
+    color: #4caf50;
+}
+
+.btn-deslike {
+    color: #f44336;
+}
+
+/* RODAPÉ */
+.rodape {
+    margin-top: 60px;
+    padding: 30px 20px;
+    border-top: 2px solid #272727;
+    background: #0a0a0a;
+    border-radius: 16px;
+}
+
+.rodape p {
+    margin: 5px 0;
+    color: #888;
+    font-size: 18px;
+}
+
+.rodape-pequeno {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
 }
