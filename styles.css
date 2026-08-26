@@ -1,5 +1,5 @@
 body {
-    background-color: #0f0f0f;
+    background-color: #3a3a3a;
     color: #f1f1f1;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -8,14 +8,14 @@ body {
 }
 
 h1 {
-    color: #f1f1f1;
+    color: #ffffff;
     font-size: 45px;
     margin-top: 20px;
-    text-shadow: 0 0 20px rgba(255,255,255,0.1);
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
 h2 {
-    color: #aaaaaa;
+    color: #dddddd;
     font-size: 28px;
     margin-top: 50px;
     margin-bottom: 15px;
@@ -24,21 +24,21 @@ h2 {
 
 /* DESTAQUE DO ARTISTA */
 .artista-destaque {
-    background: #1a1a1a;
+    background: #4a4a4a;
     padding: 15px 30px;
     border-radius: 50px;
     display: inline-block;
     margin: 10px auto 20px;
-    border: 2px solid #333;
-    box-shadow: 0 0 30px rgba(255,255,255,0.05);
+    border: 2px solid #666;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
 }
 
 .nome-artista {
     font-size: 32px;
     font-weight: bold;
-    color: #ff6b6b;
+    color: #eeeeee;
     margin: 0 15px;
-    text-shadow: 0 0 20px rgba(255,107,107,0.3);
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
     letter-spacing: 3px;
 }
 
@@ -49,16 +49,16 @@ h2 {
 iframe {
     max-width: 100%;
     border-radius: 12px;
-    border: 2px solid #272727;
+    border: 2px solid #666;
 }
 
 .palco {
-    background: #0f0f0f;
+    background: #333333;
     padding: 5px;
     border-radius: 16px;
     max-width: 900px;
     margin: 10px auto;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 /* BOTÕES DE LIKE/DESLIKE */
@@ -70,8 +70,8 @@ iframe {
 }
 
 .btn-like, .btn-deslike {
-    background: #272727;
-    color: #f1f1f1;
+    background: #555555;
+    color: #ffffff;
     border: none;
     padding: 10px 25px;
     border-radius: 30px;
@@ -82,42 +82,42 @@ iframe {
 }
 
 .btn-like:hover {
-    background: #3a3a3a;
+    background: #666666;
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,200,0,0.2);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
 .btn-deslike:hover {
-    background: #3a3a3a;
+    background: #666666;
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255,0,0,0.2);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
 .btn-like {
-    color: #4caf50;
+    color: #dddddd;
 }
 
 .btn-deslike {
-    color: #f44336;
+    color: #bbbbbb;
 }
 
 /* RODAPÉ */
 .rodape {
     margin-top: 60px;
     padding: 30px 20px;
-    border-top: 2px solid #272727;
-    background: #0a0a0a;
+    border-top: 2px solid #555555;
+    background: #303030;
     border-radius: 16px;
 }
 
 .rodape p {
     margin: 5px 0;
-    color: #888;
+    color: #cccccc;
     font-size: 18px;
 }
 
 .rodape-pequeno {
     font-size: 14px;
-    color: #555;
+    color: #999999;
     margin-top: 8px;
 }
