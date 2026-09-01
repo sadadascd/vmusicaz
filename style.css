@@ -1,3 +1,4 @@
+/* ===== CONFIGURAÇÃO GERAL ===== */
 body {
     background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #2d2d2d);
     color: #f5f5f5;
@@ -15,37 +16,74 @@ h1 {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-h2 {
-    color: #eeeeee;
-    font-size: 28px;
-    margin-top: 50px;
-    margin-bottom: 15px;
-    font-weight: normal;
+/* ===== MENU DE CATEGORIAS ===== */
+.menu-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0 30px 0;
 }
 
-.artista-destaque {
-    background: linear-gradient(90deg, #444444, #666666);
-    padding: 15px 30px;
+.botao-categoria {
+    padding: 12px 30px;
     border-radius: 50px;
-    display: inline-block;
-    margin: 10px auto 20px;
-    border: 2px solid #888888;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-}
-
-.nome-artista {
-    font-size: 32px;
+    text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
     color: #ffffff;
-    margin: 0 15px;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-    letter-spacing: 3px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.icone-artista {
-    font-size: 28px;
+.botao-categoria:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
+.botao-carro { background: #FF3333; border-color: #FF6666; }
+.botao-carro:hover { background: #FF5555; }
+
+.botao-musica { background: #9B59B6; border-color: #BB66FF; }
+.botao-musica:hover { background: #BB66FF; }
+
+.botao-comedia { background: #F4A300; border-color: #FFD700; color: #1a1a1a; }
+.botao-comedia:hover { background: #FFD700; }
+
+.botao-todas { background: #555555; border-color: #888888; }
+.botao-todas:hover { background: #777777; }
+
+/* ===== GRADE DE VÍDEOS (lado a lado) ===== */
+.grade-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.video-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border-left: 5px solid #888;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.titulo-video {
+    color: #eeeeee;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0 5px 0;
+    text-align: left;
+}
+
+/* ===== IFRAMES (vídeos) ===== */
 iframe {
     max-width: 100%;
     border-radius: 12px;
@@ -56,46 +94,124 @@ iframe {
     background: linear-gradient(145deg, #3a3a3a, #1a1a1a);
     padding: 6px;
     border-radius: 20px;
-    max-width: 900px;
     margin: 10px auto;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
 }
 
+/* ===== BOTÕES DE LIKE/DESLIKE ===== */
 .botoes-acao {
-    margin: 15px auto 30px;
+    margin: 10px 0 5px 0;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.btn-like,
-.btn-deslike {
+.btn-like, .btn-deslike {
     background: #4a4a4a;
     color: #ffffff;
     border: 1px solid #777777;
-    padding: 10px 25px;
+    padding: 8px 20px;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
 }
 
-.btn-like:hover,
-.btn-deslike:hover {
+.btn-like:hover, .btn-deslike:hover {
     background: #666666;
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.btn-like {
-    color: #eeeeee;
+.btn-like { color: #eeeeee; }
+.btn-deslike { color: #cccccc; }
+
+/* ===== ARTISTA DESTAQUE ===== */
+.artista-destaque {
+    background: linear-gradient(90deg, #444444, #666666);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 5px auto 10px;
+    border: 2px solid #888888;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-.btn-deslike {
-    color: #cccccc;
+.nome-artista {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 15px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    letter-spacing: 3px;
 }
 
+.icone-artista { font-size: 28px; }
+
+/* ===== CATEGORIAS (sistema de esconder/mostrar) ===== */
+.categoria {
+    display: none;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px 0;
+    animation: surgir 0.5s ease;
+}
+
+.categoria:target { display: block; }
+
+#categoria-todas { display: block; }
+
+.categoria:target ~ #categoria-todas { display: none; }
+
+#categoria-todas:target { display: block; }
+
+#categoria-todas:target ~ .categoria { display: none; }
+
+/* ===== CORES DAS CATEGORIAS ===== */
+.categoria-carro {
+    background: linear-gradient(145deg, #2a0a0a, #1a0505);
+    border-left: 8px solid #FF3333;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+.categoria-carro .titulo-categoria { color: #FF4444; text-shadow: 0 0 30px rgba(255, 0, 0, 0.5); font-size: 32px; }
+
+.categoria-musica {
+    background: linear-gradient(145deg, #1a0a2a, #0a0515);
+    border-left: 8px solid #9B59B6;
+    box-shadow: 0 0 30px rgba(155, 89, 182, 0.2);
+}
+.categoria-musica .titulo-categoria { color: #BB66FF; text-shadow: 0 0 30px rgba(155, 89, 182, 0.5); font-size: 32px; }
+
+.categoria-comedia {
+    background: linear-gradient(145deg, #2a2a0a, #1a1a05);
+    border-left: 8px solid #FFD700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+.categoria-comedia .titulo-categoria { color: #FFD700; text-shadow: 0 0 30px rgba(255, 215, 0, 0.5); font-size: 32px; }
+
+#categoria-todas {
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    border-left: 8px solid #888888;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px 0;
+}
+#categoria-todas .titulo-categoria { color: #ffffff; text-shadow: 0 0 30px rgba(255, 255, 255, 0.3); font-size: 32px; }
+
+.titulo-categoria {
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes surgir {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RODAPÉ ===== */
 .rodape {
     margin-top: 60px;
     padding: 30px 20px;
@@ -104,14 +220,5 @@ iframe {
     border-radius: 16px;
 }
 
-.rodape p {
-    margin: 5px 0;
-    color: #dddddd;
-    font-size: 18px;
-}
-
-.rodape-pequeno {
-    font-size: 14px;
-    color: #aaaaaa;
-    margin-top: 8px;
-}
+.rodape p { margin: 5px 0; color: #dddddd; font-size: 18px; }
+.rodape-pequeno { font-size: 14px; color: #aaaaaa; margin-top: 8px; }
