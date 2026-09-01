@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #202020, #3a3a3a);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #2d2d2d);
     color: #f5f5f5;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -53,12 +53,12 @@ iframe {
 }
 
 .palco {
-    background: #252525;
-    padding: 5px;
-    border-radius: 16px;
+    background: linear-gradient(145deg, #3a3a3a, #1a1a1a);
+    padding: 6px;
+    border-radius: 20px;
     max-width: 900px;
     margin: 10px auto;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
 }
 
 .botoes-acao {
@@ -115,4 +115,3 @@ iframe {
     color: #aaaaaa;
     margin-top: 8px;
 }
-
